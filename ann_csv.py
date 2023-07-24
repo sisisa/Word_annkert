@@ -4,8 +4,7 @@ from janome.tokenizer import Tokenizer
 from wordcloud import WordCloud
 
 list = []
-with open('annkert.csv', 'r',encoding="utf-8") as f:
-
+with open('an.csv', 'r',encoding="utf-8") as f:
 
     '''
     UnicodeDecodeError:2023年7月24日解決(参考情報=https://qiita.com/Yuu94/items/9ffdfcb2c26d6b33792e)
@@ -36,13 +35,12 @@ with open('annkert.csv', 'r',encoding="utf-8") as f:
     ## wordcloud の実行
     ## 日本語フォントを指定
     c_word = ' '.join(docs)
-    wordcloud = WordCloud(background_color='white',
-                        font_path='./IPAfont00303/ipag.ttf',
-                        width=800, height=400).generate(c_word)
+    wordcloud = WordCloud(background_color='white',font_path="C:\\Users\\taniguchi\\OneDrive\\Word_annkert\\IPAfont00303\\ipamp.ttf",width=800, height=400).generate(c_word)
 
     ## 結果を画像に保存
-    wordcloud.to_file('./wordcloud.png')
+    wordcloud.to_file('./suda/an.png')
 
     # 単語を多い順に並べる
     c = collections.Counter(docs)
     print(c)
+
