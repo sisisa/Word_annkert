@@ -4,14 +4,13 @@ from janome.tokenizer import Tokenizer
 from wordcloud import WordCloud
 
 list = []
-with open('an.csv', 'r',encoding="utf-8") as f:
-
+with open('an.csv', 'r',encoding="shift-jis") as f:
     '''
     UnicodeDecodeError:2023年7月24日解決(参考情報=https://qiita.com/Yuu94/items/9ffdfcb2c26d6b33792e)
     '''
     # カラムの値を抽出
     for row in csv.reader(f):
-        list.append(row[1])
+        list.append(row[0])
 
     # 先頭文字を削除
     del list[0]
@@ -35,10 +34,10 @@ with open('an.csv', 'r',encoding="utf-8") as f:
     ## wordcloud の実行
     ## 日本語フォントを指定
     c_word = ' '.join(docs)
-    wordcloud = WordCloud(background_color='white',font_path="C:\\Users\\taniguchi\\OneDrive\\Word_annkert\\IPAfont00303\\ipamp.ttf",width=800, height=400).generate(c_word)
+    wordcloud = WordCloud(background_color='black',font_path="C:\\Users\\taniguchi\\OneDrive\\Word_annkert\\IPAfont00303\\ipamp.ttf",width=800, height=400).generate(c_word)
 
     ## 結果を画像に保存
-    wordcloud.to_file('./suda/an.png')
+    wordcloud.to_file('./suda/an_black.png')
 
     # 単語を多い順に並べる
     c = collections.Counter(docs)

@@ -10,8 +10,9 @@ apple orange banana grape cherry pineapple watermelonをワードクラウド
 
 ## ann_csv.py
 # 2023年7月24日
-アンケート結果をcsvにし、ワードクラウドの作成を試みた。
-とりあえず、ワードクラウド完成。
-これから前処理などを行って改良していく。
+- アンケート結果をcsvにし、ワードクラウドの作成を試みた。
+- とりあえず、ワードクラウド完成。
+- これから前処理などを行って改良していく。
+- 背景色を黒色に変更。
 # SyntaxError: (unicode error) 'unicodeescape' codec can't decode bytes in position 2-3: truncated \UXXXXXXXX escape=2023/07/24(参考情報=https://aiacademy.jp/media/?p=1739)
     
