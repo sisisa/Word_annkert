@@ -4,8 +4,12 @@ from janome.tokenizer import Tokenizer
 from wordcloud import WordCloud
 
 list = []
-with open('annkert.csv', 'r') as f:
+with open('annkert.csv', 'r',encoding="utf-8") as f:
 
+
+    '''
+    UnicodeDecodeError:2023年7月24日解決(参考情報=https://qiita.com/Yuu94/items/9ffdfcb2c26d6b33792e)
+    '''
     # カラムの値を抽出
     for row in csv.reader(f):
         list.append(row[1])
