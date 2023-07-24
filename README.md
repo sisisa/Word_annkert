@@ -1,11 +1,11 @@
-#sumomo.py
+## sumomo.py
 すもももももももものうちを形態素解析
 
-#apple.py
+## apple.py
 apple orange banana grape cherry pineapple watermelonをワードクラウド
 
 
-#japan.py
+## japan.py
 日本の都道府県名をワードクラウドでグラフ化(Chatgptで作成)
 
 ## ann_csv.py
